@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>색채성격검사</title>
+        
+        <!-- 에러 방지: favicon.ico -->
+        <link rel="shortcut icon" href="#">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="test.css">
+        
+        <!-- JS -->
+        <script src="test.js" defer></script>
+
+        <!-- JQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+        <!-- Icon -->
+        <script src="https://kit.fontawesome.com/42bf719602.js" crossorigin="anonymous"></script>
+
+        <!-- Sweet Alert -->
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <button class="backBtn" type="button" onclick="location.href='index.html';"><i class="fas fa-chevron-left"></i></button>
+                <div class="logo">
+                    <img src="../img/logo.png" alt="">
+                    <h1>Personality Color Test</h1>
+                </div>
+            </header>
+
+            <h3 class="caution">
+                <span>가장 본인과 가까운 선택지를 고르시되<br>많은 시간을 소요해서는 안 됩니다.</span>
+                <span><i class="fas fa-check"></i> 1번~7번은 3개 중 1개를 골라주세요.</span>
+                <span><i class="fas fa-check"></i> 8번~47번은 3개 중 2개를 골라주세요.</span>
+            </h3>
+            
+            <ul class="questions">
+                <li class="now">
+                    <h4>1번</h4>
+                    <label><input type="radio" name="question1" value="number1">모두와 사이좋게</label>
+                    <label><input type="radio" name="question1" value="number2">스스로 열심히</label>
+                    <label><input type="radio" name="question1" value="number3">사회적인 성공</label>
+                </li>
+                <li style="display: none;">
+                    <h4>2번</h4>
+                    <label><input type="radio" name="question2" value="number1">나를 이해해 주는 사람</label>
+                    <label><input type="radio" name="question2" value="number2">중요할 때 도움이 되는 사람</label>
+                    <label><input type="radio" name="question2" value="number3">필요할 때 도움이 되는 사람</label>
+                </li>
+                <li style="display: none;">
+                    <h4>3번</h4>
+                    <label><input type="radio" name="question3" value="number1">신뢰 관계 형성</label>
+                    <label><input type="radio" name="question3" value="number2">꿈의 실현</label>
+                    <label><input type="radio" name="question3" value="number3">가능성을 실현</label>
+                </li>
+                <li style="display: none;">
+                    <h4>4번</h4>
+                    <label><input type="radio" name="question4" value="number1">상대의 만족 우선</label>
+                    <label><input type="radio" name="question4" value="number2">내가 납듭하는 것이 우선</label>
+                    <label><input type="radio" name="question4" value="number3">나의 바람과 희망이 우선</label>
+                </li>
+                <li style="display: none;">
+                    <h4>5번</h4>
+                    <label><input type="radio" name="question5" value="number1">원리원칙에 입각</label>
+                    <label><input type="radio" name="question5" value="number2">타이밍에 집중</label>
+                    <label><input type="radio" name="question5" value="number3">결과 중시</label>
+                </li>
+                <li style="display: none;">
+                    <h4>6번</h4>
+                    <label><input type="radio" name="question6" value="number1">인품이 좋은 사람</label>
+                    <label><input type="radio" name="question6" value="number2">실력이 있는 사람</label>
+                    <label><input type="radio" name="question6" value="number3">권력이 있는 사람</label>
+                </li>
+                <li style="display: none;">
+                    <h4>7번</h4>
+                    <label><input type="radio" name="question7" value="number1">사명감</label>
+                    <label><input type="radio" name="question7" value="number2">합리성</label>
+                    <label><input type="radio" name="question7" value="number3">성취감</label>
+                </li>
+                <li style="display: none;">
+                    <h4>8번</h4>
+                    <label><input type="checkbox" name="question8" value="number4">프라이드</label>
+                    <label><input type="checkbox" name="question8" value="number5">단기승부</label>
+                    <label><input type="checkbox" name="question8" value="number6">프로의식</label>
+                </li>
+                <li style="display: none;">
+                    <h4>9번</h4>
+                    <label><input type="checkbox" name="question9" value="number7">화합</label>
+                    <label><input type="checkbox" name="question9" value="number8">나만의 방식</label>
+                    <label><input type="checkbox" name="question9" value="number9">합리주의</label>
+                </li>
+                <li style="display: none;">
+                    <h4>10번</h4>
+                    <label><input type="checkbox" name="question10" value="number10">경계심</label>
+                    <label><input type="checkbox" name="question10" value="number11">유연함</label>
+                    <label><input type="checkbox" name="question10" value="number12">완벽주의</label>
+                </li>
+                <li style="display: none;">
+                    <h4>11번</h4>
+                    <label><input type="checkbox" name="question11" value="number13">커뮤니케이션</label>
+                    <label><input type="checkbox" name="question11" value="number14">포용력</label>
+                    <label><input type="checkbox" name="question11" value="number15">도전정신</label>
+                </li>
+                <li style="display: none;">
+                    <h4>12번</h4>
+                    <label><input type="checkbox" name="question12" value="number4">새로움</label>
+                    <label><input type="checkbox" name="question12" value="number5">변화</label>
+                    <label><input type="checkbox" name="question12" value="number6">행동</label>
+                </li>
+                <li style="display: none;">
+                    <h4>13번</h4>
+                    <label><input type="checkbox" name="question13" value="number7">외로움</label>
+                    <label><input type="checkbox" name="question13" value="number8">독립</label>
+                    <label><input type="checkbox" name="question13" value="number9">위엄</label>
+                </li>
+                <li style="display: none;">
+                    <h4>14번</h4>
+                    <label><input type="checkbox" name="question14" value="number10">사랑</label>
+                    <label><input type="checkbox" name="question14" value="number11">평등</label>
+                    <label><input type="checkbox" name="question14" value="number12">권위</label>
+                </li>
+                <li style="display: none;">
+                    <h4>15번</h4>
+                    <label><input type="checkbox" name="question15" value="number13">경험</label>
+                    <label><input type="checkbox" name="question15" value="number14">승리</label>
+                    <label><input type="checkbox" name="question15" value="number15">스피드</label>
+                </li>
+                <li style="display: none;">
+                    <h4>16번</h4>
+                    <label><input type="checkbox" name="question16" value="number4">감각적</label>
+                    <label><input type="checkbox" name="question16" value="number5">표현력</label>
+                    <label><input type="checkbox" name="question16" value="number6">기억력</label>
+                </li>
+                <li style="display: none;">
+                    <h4>17번</h4>
+                    <label><input type="checkbox" name="question17" value="number7">사람</label>
+                    <label><input type="checkbox" name="question17" value="number8">메모</label>
+                    <label><input type="checkbox" name="question17" value="number9">직관</label>
+                </li>
+                <li style="display: none;">
+                    <h4>18번</h4>
+                    <label><input type="checkbox" name="question18" value="number10">관찰력</label>
+                    <label><input type="checkbox" name="question18" value="number11">인내력</label>
+                    <label><input type="checkbox" name="question18" value="number12">분석적</label>
+                </li>
+                <li style="display: none;">
+                    <h4>19번</h4>
+                    <label><input type="checkbox" name="question19" value="number13">자신감</label>
+                    <label><input type="checkbox" name="question19" value="number14">장기적</label>
+                    <label><input type="checkbox" name="question19" value="number15">이해력</label>
+                </li>
+                <li style="display: none;">
+                    <h4>20번</h4>
+                    <label><input type="checkbox" name="question20" value="number4">정보 수집</label>
+                    <label><input type="checkbox" name="question20" value="number5">기브앤테이크</label>
+                    <label><input type="checkbox" name="question20" value="number6">문제 발견</label>
+                </li>
+                <li style="display: none;">
+                    <h4>21번</h4>
+                    <label><input type="checkbox" name="question21" value="number7">관심</label>
+                    <label><input type="checkbox" name="question21" value="number8">창조</label>
+                    <label><input type="checkbox" name="question21" value="number9">감성</label>
+                </li>
+                <li style="display: none;">
+                    <h4>22번</h4>
+                    <label><input type="checkbox" name="question22" value="number10">안심</label>
+                    <label><input type="checkbox" name="question22" value="number11">믿음</label>
+                    <label><input type="checkbox" name="question22" value="number12">명예</label>
+                </li>
+                <li style="display: none;">
+                    <h4>23번</h4>
+                    <label><input type="checkbox" name="question23" value="number13">끈기</label>
+                    <label><input type="checkbox" name="question23" value="number14">서비스</label>
+                    <label><input type="checkbox" name="question23" value="number15">호기심</label>
+                </li>
+                <li style="display: none;">
+                    <h4>24번</h4>
+                    <label><input type="checkbox" name="question24" value="number4">유머</label>
+                    <label><input type="checkbox" name="question24" value="number5">자유</label>
+                    <label><input type="checkbox" name="question24" value="number6">노력</label>
+                </li>
+                <li style="display: none;">
+                    <h4>25번</h4>
+                    <label><input type="checkbox" name="question25" value="number7">약속</label>
+                    <label><input type="checkbox" name="question25" value="number8">극복</label>
+                    <label><input type="checkbox" name="question25" value="number9">기분</label>
+                </li>
+                <li style="display: none;">
+                    <h4>26번</h4>
+                    <label><input type="checkbox" name="question26" value="number10">보호</label>
+                    <label><input type="checkbox" name="question26" value="number11">성실</label>
+                    <label><input type="checkbox" name="question26" value="number12">강함</label>
+                </li>
+                <li style="display: none;">
+                    <h4>27번</h4>
+                    <label><input type="checkbox" name="question27" value="number13">책임감</label>
+                    <label><input type="checkbox" name="question27" value="number14">대범함</label>
+                    <label><input type="checkbox" name="question27" value="number15">사교성</label>
+                </li>
+                <li style="display: none;">
+                    <h4>28번</h4>
+                    <label><input type="checkbox" name="question28" value="number4">집중력</label>
+                    <label><input type="checkbox" name="question28" value="number5">감수성</label>
+                    <label><input type="checkbox" name="question28" value="number6">저돌적</label>
+                </li>
+                <li style="display: none;">
+                    <h4>29번</h4>
+                    <label><input type="checkbox" name="question29" value="number7">조심성</label>
+                    <label><input type="checkbox" name="question29" value="number8">꼼꼼한</label>
+                    <label><input type="checkbox" name="question29" value="number9">폭발적</label>
+                </li>
+                <li style="display: none;">
+                    <h4>30번</h4>
+                    <label><input type="checkbox" name="question30" value="number10">순응적</label>
+                    <label><input type="checkbox" name="question30" value="number11">자립적</label>
+                    <label><input type="checkbox" name="question30" value="number12">조직적</label>
+                </li>
+                <li style="display: none;">
+                    <h4>31번</h4>
+                    <label><input type="checkbox" name="question31" value="number13">이성적</label>
+                    <label><input type="checkbox" name="question31" value="number14">지지 않는</label>
+                    <label><input type="checkbox" name="question31" value="number15">독특한</label>
+                </li>
+                <li style="display: none;">
+                    <h4>32번</h4>
+                    <label><input type="checkbox" name="question32" value="number4">넓은 시야</label>
+                    <label><input type="checkbox" name="question32" value="number5">가정적</label>
+                    <label><input type="checkbox" name="question32" value="number6">준비성</label>
+                </li>
+                <li style="display: none;">
+                    <h4>33번</h4>
+                    <label><input type="checkbox" name="question33" value="number7">상식적</label>
+                    <label><input type="checkbox" name="question33" value="number8">확인</label>
+                    <label><input type="checkbox" name="question33" value="number9">섬세한</label>
+                </li>
+                <li style="display: none;">
+                    <h4>34번</h4>
+                    <label><input type="checkbox" name="question34" value="number10">친절한</label>
+                    <label><input type="checkbox" name="question34" value="number11">직설적</label>
+                    <label><input type="checkbox" name="question34" value="number12">매너 있는</label>
+                </li>
+                <li style="display: none;">
+                    <h4>35번</h4>
+                    <label><input type="checkbox" name="question35" value="number13">절제하는</label>
+                    <label><input type="checkbox" name="question35" value="number14">자기중심적</label>
+                    <label><input type="checkbox" name="question35" value="number15">뽐내는</label>
+                </li>
+                <li style="display: none;">
+                    <h4>36번</h4>
+                    <label><input type="checkbox" name="question36" value="number4">자발적</label>
+                    <label><input type="checkbox" name="question36" value="number5">주위의 영향</label>
+                    <label><input type="checkbox" name="question36" value="number6">주도적</label>
+                </li>
+                <li style="display: none;">
+                    <h4>37번</h4>
+                    <label><input type="checkbox" name="question37" value="number7">객관적</label>
+                    <label><input type="checkbox" name="question37" value="number8">파고드는</label>
+                    <label><input type="checkbox" name="question37" value="number9">자율적<label>
+                </li>
+                <li style="display: none;">
+                    <h4>38번</h4>
+                    <label><input type="checkbox" name="question38" value="number10">부드러운</label>
+                    <label><input type="checkbox" name="question38" value="number11">예민한</label>
+                    <label><input type="checkbox" name="question38" value="number12">냉정한</label>
+                </li>
+                <li style="display: none;">
+                    <h4>39번</h4>
+                    <label><input type="checkbox" name="question39" value="number13">검소한</label>
+                    <label><input type="checkbox" name="question39" value="number14">화려한</label>
+                    <label><input type="checkbox" name="question39" value="number15">유행에 민감한</label>
+                </li>
+                <li style="display: none;">
+                    <h4>40번</h4>
+                    <label><input type="checkbox" name="question40" value="number4">지적(知的)</label>
+                    <label><input type="checkbox" name="question40" value="number5">협상하는</label>
+                    <label><input type="checkbox" name="question40" value="number6">리더십</label>
+                </li>
+                <li style="display: none;">
+                    <h4>41번</h4>
+                    <label><input type="checkbox" name="question41" value="number7">상담</label>
+                    <label><input type="checkbox" name="question41" value="number8">비판에 약한</label>
+                    <label><input type="checkbox" name="question41" value="number9">자부심</label>
+                </li>
+                <li style="display: none;">
+                    <h4>42번</h4>
+                    <label><input type="checkbox" name="question42" value="number10">분위기 파악</label>
+                    <label><input type="checkbox" name="question42" value="number11">주위를 돌보는</label>
+                    <label><input type="checkbox" name="question42" value="number12">기획하는</label>
+                </li>
+                <li style="display: none;">
+                    <h4>43번</h4>
+                    <label><input type="checkbox" name="question43" value="number13">신중한</label>
+                    <label><input type="checkbox" name="question43" value="number14">체면 중시</label>
+                    <label><input type="checkbox" name="question43" value="number15">배우기 좋아하는</label>
+                </li>
+                <li style="display: none;">
+                    <h4>44번</h4>
+                    <label><input type="checkbox" name="question44" value="number4">스마트</label>
+                    <label><input type="checkbox" name="question44" value="number5">게임</label>
+                    <label><input type="checkbox" name="question44" value="number6">자극</label>
+                </li>
+                <li style="display: none;">
+                    <h4>45번</h4>
+                    <label><input type="checkbox" name="question45" value="number7">우호적</label>
+                    <label><input type="checkbox" name="question45" value="number8">말수가 적은</label>
+                    <label><input type="checkbox" name="question45" value="number9">매력적</label>
+                </li>
+                <li style="display: none;">
+                    <h4>46번</h4>
+                    <label><input type="checkbox" name="question46" value="number10">호감 가는</label>
+                    <label><input type="checkbox" name="question46" value="number11">냉철한</label>
+                    <label><input type="checkbox" name="question46" value="number12">전문적</label>
+                </li>
+                <li style="display: none;">
+                    <h4>47번</h4>
+                    <label><input type="checkbox" name="question47" value="number13">차분한</label>
+                    <label><input type="checkbox" name="question47" value="number14">카리스마</label>
+                    <label><input type="checkbox" name="question47" value="number15">튀는</label>
+                </li>
+            </ul>
+            <div class="buttons">
+                <button class="btn" id="previousBtn" onclick="clickPreBtn()"><i class="fas fa-chevron-left"></i>이전</button>
+                <button class="btn" id="nextBtn" onclick="clickNextBtn()">다음<i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </body>
+</html>

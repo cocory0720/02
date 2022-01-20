@@ -1,0 +1,375 @@
+:root {
+  /* Color */
+  --dark-pink-color: #ea7387;
+  --light-pink-color: #f48fb1;
+  --white-color: #fffeff;
+  --grey-color: #f5f5f5;
+
+  /* result color */
+  --yellow-color: #ffeb3b;
+  --orange-color: #ff6d00;
+  --red-color: #d50000;
+  --green-color: #43a047;
+  --turquoise-color: #0095a1;
+  --purple-color: #9c27b0;
+  --yellow-green-color: #95c730;
+  --blue-green-color: #19a993;
+  --indigo-color: #00227b;
+  --blue-color: #039be5;
+  --magenta-color: #e60088;
+  --red-orange-color: #eb3605;
+
+  /* Padding - Margin - Border */
+  --padding-big: 1em;
+  --padding-medium: 0.5em;
+  --body-width: 25.875em;
+
+  --title-margin: 3em;
+  --btn-padding: 1.3em;
+
+  --cau-padding-side: 1.25em;
+
+  /* Font Size */
+  --font-small: 0.5em;
+  --font-medium: 0.875em;
+  --font-big: 1.3em;
+  --font-biggest: 3em;
+
+  --font-title: 0.7em;
+  --font-btn: 1.5em;
+
+  /* result size */
+  --common-size: 10px;
+  --rec-padding-size: 15px;
+  --support-width: 80px;
+  --support-font: 30px;
+
+  /* radius */
+  --btn-radius: 3px; /* used - rectangle */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+
+  font-family: Nunito, sans-serif;
+}
+
+html,
+body {
+  width: 414px;
+  height: 736px;
+  margin: 0 auto;
+
+  background-color: var(--grey-color);
+}
+
+.container {
+  width: 100%;
+  /* height: 100%; */
+
+  background-color: var(--white-color);
+}
+
+img {
+  height: 60px;
+}
+
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-around;
+
+  padding-top: var(--padding-big);
+
+  color: var(--white-color);
+  background-color: var(--dark-pink-color);
+
+  font-size: var(--font-title);
+}
+
+header .backBtn {
+  border: none;
+  background-color: var(--dark-pink-color);
+
+  font-size: var(--font-btn);
+  color: var(--white-color);
+}
+
+header button:hover {
+  cursor: pointer;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  margin-right: var(--title-margin);
+}
+
+/* Section */
+.resultPage {
+  height: 100%;
+  padding: var(--padding-big) var(--padding-medium);
+  /* text-align: center; */
+
+  overflow: scroll;
+  background-color: var(--white-color);
+}
+
+.resultPage #radial {
+  margin: var(--title-margin) 0;
+}
+
+/* resultPage에 동적으로 붙일 결과들 */
+.resultPage .result {
+  width: 100%;
+  height: 100%;
+  color: var(--white-color);
+}
+
+/* 결과 색상 */
+.result .color {
+  width: 100%;
+  height: 15%;
+  text-align: center;
+  font-size: calc(var(--common-size) * 5);
+}
+
+/* 결과 내용 */
+.result .content {
+  font-size: calc(var(--common-size) * 2);
+  padding: calc(var(--common-size) * 2);
+  list-style: none;
+}
+
+.result li {
+  margin-bottom: calc(var(--common-size) * 2);
+  font-size: var(--font-medium);
+  /* padding:  */
+  color: black; /* 글씨 색상 설정 */
+}
+
+.result .short {
+  border-radius: 3%;
+  padding: 10px;
+}
+
+.result .short i {
+  padding-bottom: 10px;
+}
+
+.result .short .situ {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.yellow,
+.Y {
+  background-color: var(--yellow-color);
+}
+
+.orange,
+.O {
+  background-color: var(--orange-color);
+  /* border: 3px solid orange;
+  color: orange; */
+}
+
+.red,
+.R {
+  background-color: var(--red-color);
+}
+
+.green,
+.G {
+  background-color: var(--green-color);
+}
+
+.turquoise,
+.T {
+  background-color: var(--turquoise-color);
+}
+
+.purple,
+.P {
+  background-color: var(--purple-color);
+}
+
+.yellowgreen,
+.YG {
+  background-color: var(--yellow-green-color);
+}
+
+.bluegreen,
+.BG {
+  background-color: var(--blue-green-color);
+}
+
+.indigo,
+.I {
+  background-color: var(--indigo-color);
+}
+
+.blue,
+.B {
+  background-color: var(--blue-color);
+}
+
+.magenta,
+.M {
+  background-color: var(--magenta-color);
+}
+
+.redorange,
+.RO {
+  background-color: var(--red-orange-color);
+}
+
+.border_yellow {
+  border: 3px solid var(--yellow-color);
+}
+
+.border_orange {
+  border: 3px solid var(--orange-color);
+}
+
+.border_red {
+  border: 3px solid var(--red-color);
+}
+
+.border_green {
+  border: 3px solid var(--green-color);
+}
+
+.border_turquoise {
+  border: 3px solid var(--turquoise-color);
+}
+
+.border_purple {
+  border: 3px solid var(--purple-color);
+}
+
+.border_yellowgreen {
+  border: 3px solid var(--yellow-green-color);
+}
+
+.border_bluegreen {
+  border: 3px solid var(--blue-green-color);
+}
+
+.border_indigo {
+  border: 3px solid var(--indigo-color);
+}
+
+.border_blue {
+  border: 3px solid var(--blue-color);
+}
+
+.border_magenta {
+  border: 3px solid var(--magenta-color);
+}
+
+.border_redorange {
+  border: 3px solid var(--red-orange-color);
+}
+
+.icon_yellow {
+  color: var(--yellow-color);
+}
+
+.icon_orange {
+  color: var(--orange-color);
+}
+
+.icon_red {
+  color: var(--red-color);
+}
+
+.icon_green {
+  color: var(--green-color);
+}
+
+.icon_turquoise {
+  color: var(--turquoise-color);
+}
+
+.icon_purple {
+  color: var(--purple-color);
+}
+
+.icon_yellowgreen {
+  color: var(--yellow-green-color);
+}
+
+.icon_bluegreen {
+  color: var(--blue-green-color);
+}
+
+.icon_indigo {
+  color: var(--indigo-color);
+}
+
+.icon_blue {
+  color: var(--blue-color);
+}
+
+.icon_magenta {
+  color: var(--magenta-color);
+}
+
+.icon_redorange {
+  color: var(--red-orange-color);
+}
+
+.support {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.support div {
+  font-size: calc(var(--common-size) * 2);
+}
+
+.support .support1,
+.support .support2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--support-width);
+  height: var(--support-width);
+  color: var(--white-color);
+  font-size: var(--support-font);
+  border-radius: 50%;
+}
+
+.btn {
+  margin-top: var(--cau-padding-side);
+  text-align: center;
+}
+
+.startBtn {
+  padding: var(--btn-padding);
+  font-size: var(--font-medium);
+  border-radius: var(--btn-radius);
+  color: var(--white-color);
+  border: 1px solid var(--light-pink-color);
+  background-color: var(--dark-pink-color);
+}
+
+.startBtn:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 48em) {
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--white-color);
+  }
+}
